@@ -495,7 +495,40 @@ function create_post_type_html5()
         ) // Add Category and Post Tags support
     ));
     
-    
+    register_taxonomy_for_object_type('category', 'car-make-logos'); // Register Taxonomies for Category
+    register_taxonomy_for_object_type('post_tag', 'car-make-logos');
+    register_post_type('car-make-logos', // Register Custom Post Type
+        array(
+        'labels' => array(
+            'name' => __('Car Make Logos', 'car-make-logos'), // Rename these to suit
+            'singular_name' => __('Car Make Logo', 'car-make-logos'),
+            'add_new' => __('Add New', 'car-make-logos'),
+            'add_new_item' => __('Add New Car Make Logos', 'car-make-logos'),
+            'edit' => __('Edit', 'car-make-logos'),
+            'edit_item' => __('Edit Car Make Logos', 'car-make-logos'),
+            'new_item' => __('New Car Make Logos', 'car-make-logos'),
+            'view' => __('View Car Make Logos', 'car-make-logos'),
+            'view_item' => __('View Car Make Logos', 'car-make-logos'),
+            'search_items' => __('Search Car Make Logos', 'car-make-logos'),
+            'not_found' => __('No Car Make Logoss found', 'car-make-logos'),
+            'not_found_in_trash' => __('No Car Make Logoss found in Trash', 'car-make-logos')
+        ),
+        'menu_icon' => 'dashicons-format-image',   
+        'public' => true,
+        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+        'has_archive' => true,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail'
+        ), // Go to Dashboard Custom HTML5 Blank post for supports
+        'can_export' => true, // Allows export in Tools > Export
+        'taxonomies' => array(
+            'post_tag',
+            'category'
+        ) // Add Category and Post Tags support
+    ));
     
 }
 

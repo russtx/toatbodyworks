@@ -32,10 +32,10 @@ and open the template in the editor.
     RESPONSIVE      min-width:568px   iPhone5 Landscape
 \*--------------------------------------------------------------------------------------------*/
 @media only screen and (min-width:568px){
-    .mobileOnly{
+    #mobileOnly{
         display:none;
-    } 
-    .desktopOnly{
+    }
+    #desktopOnly{
         display:block;
     }
     .footer{
@@ -62,26 +62,93 @@ and open the template in the editor.
     RESPONSIVE      min-width:768px iPad Portrait
 \*--------------------------------------------------------------------------------------------*/
 @media only screen and (min-width:768px){
-    ul.menu{
-        @include span-columns(12);
-        @include omega();
+    #mobileOnly2{
+        display:none;
+    } 
+    #desktopOnly2{
+        display: block;
+    }
+    .header{
         background:$olive;
-        position:relative;
-        top:4em;
         height:4em;
-        li{
-            float:right;
-            a{
-                color:$gray;
+        position:relative;
+        top:12em;
+        margin-top:-12em;
+        .logo{
+            margin: 0 0 0 1em;
+            position: relative;
+            top: 9em;
+            width: 35%;
+            img{
+                
+            }
+        }
+        ul.menu{
+            @include span-columns(8);
+            @include shift(4);
+            position: relative;
+            top:-8em;
+            display: inline-block;
+            //background:$olive;
+            
+            
+            
+            li{
+                float: left;
+                padding: 1em;
+                line-height: 2em;
+                text-transform: uppercase;
+                a{
+                    color:$gray;
+                }
             }
         }
     }
     
     .homeSection{
+        .homeContent{
+            background:transparent;
+            border:none;
+            font-size:1.5em;
+            
+            ul.post-meta{
+                font-size:.75em;
+                li{
+                    border-top:solid 2px $yellow;
+                    padding-top:2em;
+                    span{
+                        
+                    }
+                }
+            }
+        }
         h1{
             display:none;
         }
+        .leftSide{
+            width:83.3333%;
+            float: left;
+            display:block;
+        }
+        .sidebar{
+            width:16.6667%;
+            float: left;
+            display: block;
+            background:#fff;
+            height: 100%;
+            min-height: 71.5em;
+            overflow: hidden;
+            ul{
+                li{
+                    img{
+                        margin: 1.5em auto;
+                        padding: 0 .5em;
+                    }
+                }
+            }
+        }
     }
+    
 }
 
 /*-------------------------------------------------------------------------------------------*\

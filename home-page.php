@@ -8,12 +8,15 @@ get_header(); ?>
 
 			<h1><?php the_title(); ?></h1>
                         
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home-image-414" alt="Logo" class="mobileOnly" >
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home-image-desktop-logo" alt="Logo" class="desktopOnly" >
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home-image-414" alt="Logo" id="mobileOnly" >
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home-image-desktop" alt="Logo" id="desktopOnly" >
 
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-			<!-- article -->
+			
+                <div class="leftSide">    
+                        
+                        <!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class('homeContent'); ?>>
 
 				<?php the_content(); ?>
@@ -84,6 +87,11 @@ get_header(); ?>
                                 </div>
                         <?php endwhile; ?> 
                     </div>
+                        
+                        <div id="desktopOnly2">
+                            123
+                        </div>  
+                        
                     <div class="homePostSection">            
                         <?php
                             $args = array( 'post_type' => 'home-page-post','cat' => 6,'orderby' => 'menu_order date', 'order' =>
@@ -127,9 +135,37 @@ get_header(); ?>
                                 
                     </div><!-- homePostSection -->
                     
-                    <?php echo do_shortcode('[print_continuous_slider_plus_lightbox]'); ?>
+                        <div id="mobileOnly2">
+                            <?php echo do_shortcode('[print_continuous_slider_plus_lightbox]'); ?>
+                        </div>    
+                </div><!-- leftSide -->
+                    <aside class="sidebar" id="desktopOnly2">
+                        <?php
+                            $args = array( 'post_type' => 'car-make-logos', 'orderby' => 'menu_order date', 'order' =>
+
+                            'ASC',  'posts_per_page' => '7' );
+
+                            $loop = new WP_Query( $args );
+
+                            while ( $loop->have_posts() ) : $loop->the_post();?>
+
+                                <ul>
+                                
+                                    <li>                      
+                                    <?php the_post_thumbnail(array()); // Declare pixel size you need inside the array?>
+                                    </li>
+                                    
+
+                                
+                        <?php endwhile; ?>  
+                                </ul>
+                    
+                    </aside>
+                    
 		</section>
 		<!-- /section -->
+                
+                
 	</main>
 
 
