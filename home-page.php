@@ -8,8 +8,8 @@ get_header(); ?>
 
 			<h1><?php the_title(); ?></h1>
                         
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home-image-414" alt="Logo" id="mobileOnly" >
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home-image-desktop" alt="Logo" id="desktopOnly" >
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home-image-414" alt="Logo" id="mobileOnly" class="homeImage" >
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home-image-desktop" alt="Logo" id="desktopOnly" class="homeImage" >
 
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
@@ -46,7 +46,7 @@ get_header(); ?>
 
 		<?php endif; ?>
                         
-                    <div class="homePostSection">
+                    <div class="homePostSection homeTop">
                         <?php
                             $args = array( 'post_type' => 'home-page-post','cat' => 4,'orderby' => 'menu_order date', 'order' =>
 
@@ -66,7 +66,7 @@ get_header(); ?>
                                 </div>
                         <?php endwhile; ?> 
                     </div>
-                    <div class="homePostSection">
+                    <div class="homePostSection homeTop">
                                 
                         <?php
                             $args = array( 'post_type' => 'home-page-post','cat' => 5,'orderby' => 'menu_order date', 'order' =>
@@ -88,8 +88,9 @@ get_header(); ?>
                         <?php endwhile; ?> 
                     </div>
                         
-                        <div id="desktopOnly2">
-                            123
+                        <div class="centerText" id="desktopOnly2">
+                            <p>Expert Color Matching <span>|</span> Frame &AMP; Unibody Specialists <span>|</span> Body &AMP; Paint Work <span>|</span> <br />
+                            Domestic & Foreign <span>|</span> All Insurance <span>|</span> Free Estimates <span>|</span> Towing Available</p>
                         </div>  
                         
                     <div class="homePostSection">            
@@ -154,11 +155,11 @@ get_header(); ?>
                                     <li>                      
                                     <?php the_post_thumbnail(array()); // Declare pixel size you need inside the array?>
                                     </li>
-                                    
+                                </ul>    
 
                                 
                         <?php endwhile; ?>  
-                                </ul>
+                                
                     
                     </aside>
                     

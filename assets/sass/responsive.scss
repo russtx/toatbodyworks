@@ -62,6 +62,7 @@ and open the template in the editor.
     RESPONSIVE      min-width:768px iPad Portrait
 \*--------------------------------------------------------------------------------------------*/
 @media only screen and (min-width:768px){
+    
     #mobileOnly2{
         display:none;
     } 
@@ -83,28 +84,53 @@ and open the template in the editor.
                 
             }
         }
-        ul.menu{
-            @include span-columns(8);
-            @include shift(4);
-            position: relative;
-            top:-8em;
-            display: inline-block;
-            //background:$olive;
-            
-            
-            
-            li{
-                float: left;
-                padding: 1em;
-                line-height: 2em;
-                text-transform: uppercase;
-                a{
-                    color:$gray;
+        .nav{
+            ul.menu{
+                @include span-columns(8);
+                @include shift(4);
+                position: absolute;
+                top:0;
+                display: inline-block;
+                //background:$olive;
+                ul{
+                    display:none;
+                    position: absolute;
+                    width:10em;
+                    background:$olive;
+                    z-index:9999;
+
+                    li{
+                        display:block;
+                        float:none;
+                        width:16em;
+                        a,visited{
+                            padding: 10px 15px;
+                        }
+                    }
+                }
+                
+                li{
+                    float: left;
+                    padding: 1em;
+                    line-height: 2em;
+                    text-transform: uppercase;
+                    a{
+                        color:$gray;
+                    }
                 }
             }
         }
+        
+        .nav ul.menu li.current-menu-item>a, .nav ul.menu li a:hover {
+            color: #fff;
+        }
+        .nav ul.menu li:hover > ul {
+            display:block;
+        }
     }
-    
+    img.homeImage{
+        border-bottom:solid 2px $olive;
+    }
     .homeSection{
         .homeContent{
             background:transparent;
@@ -136,40 +162,151 @@ and open the template in the editor.
             display: block;
             background:#fff;
             height: 100%;
-            min-height: 71.5em;
+            min-height: 81em;
             overflow: hidden;
             ul{
                 li{
                     img{
+                        display:block;
                         margin: 1.5em auto;
                         padding: 0 .5em;
                     }
                 }
             }
         }
+        .homePostSection{
+            @include span-columns(6);
+            min-height: 26em;
+            .homePost{
+                p{
+                    padding: 0 2em;
+                }
+            }
+        }
+        .homePostSection:nth-child(2), .homePostSection:nth-child(8){
+            @include span-columns(6);
+            @include omega();
+        }
+        .centerText{
+            @include span-columns(12);
+            background:$gray;
+            border-top: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            height:8em;
+            p{
+                color:$yellow;
+                padding: 1em 1.5em;
+                font-size: 1.4em;
+                font-weight: 500;
+                line-height: 1.8em;
+                span{
+                    color:#fff;
+                }
+            }
+        }
     }
-    
+    .footer{
+        height:28em;
+        .footerIcons{
+            //@include outer-container;
+            background:$gray;
+            border-top:solid 2px $yellow;
+            height:12em;
+            padding:0 3em;
+            .footerLinks{
+                @include span-columns(3);
+                text-align:center;
+                a{
+                    color:#fff;
+                    line-height:1.8em;
+                    .fa{
+                        color:$yellow;
+                        font-size: 3em;
+                        padding: 1em .2em .2em;
+                    }
+                }
+            }
+        }
+        ul.menu{
+            margin: 2em 0 0 2em;
+            li{
+                float:left;
+                text-transform:uppercase;
+                a{
+                    color:#fff;
+                    margin-right: 1em;
+                    
+                }
+                ul.sub-menu{
+                    margin: 1em 0em 0 -4em;
+                    li{
+                        float:none;
+                        margin-bottom:.4em;
+                    }
+                }
+            }
+            
+        }
+    }
 }
 
 /*-------------------------------------------------------------------------------------------*\
     RESPONSIVE      min-width:1024px       ipad Landscape
 \*--------------------------------------------------------------------------------------------*/
 @media only screen and (min-width:1024px){
-    
+    .header{
+        .nav{
+            ul.menu{
+                @include span-columns(6);
+                @include shift(6);
+            }
+        }
+    }
+    .homeSection {
+        .centerText{
+            height: 10em;
+            p{
+                padding: 1em 3.5em;
+                font-size: 1.6em;
+            }
+        }
+        .sidebar{
+            min-height: 83em;
+        }
+    }
 }
 
 /*-------------------------------------------------------------------------------------------*\
     RESPONSIVE      min-width:1140px
 \*--------------------------------------------------------------------------------------------*/
 @media only screen and (min-width:1140px){
-    
+    .homeSection{
+        
+        
+        .sidebar{
+            ul{
+                li{
+                    img{
+                        margin-top:3.5em;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /*-------------------------------------------------------------------------------------------*\
     RESPONSIVE      min-width:1240px
 \*--------------------------------------------------------------------------------------------*/
 @media only screen and (min-width:1240px){
-    
+    .header{
+        .nav{
+            ul.menu{
+                @include span-columns(5);
+                @include shift(7);
+            }
+        }
+    }
 }
 @media only screen and (-webkit-min-device-pixel-ratio:1.5),
 	   only screen and (min-resolution:144dpi) {

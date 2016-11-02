@@ -70,6 +70,7 @@ img {
 a {
     color:fff;
     text-decoration:none;
+    cursor: pointer;
 }
 a:hover {
     color:$hover-white;
@@ -210,6 +211,10 @@ nav input[type="checkbox"]{
     h1{
         text-align: center;
     }
+    img.homeImage{
+        width:100%
+    }
+    
     .homeContent{
         background:$gray;
         padding:2em 1em;
@@ -264,6 +269,36 @@ nav input[type="checkbox"]{
 
 //home page end
 
+//tour page start
+.default{
+    h1{
+        text-align:center;
+    }
+    .tourPost{
+        margin-top:3em;
+        h2{
+            text-align:center;
+            color:$yellow;
+        }
+        .postThumb{
+            img{
+                padding:1em 3em;
+            }
+        }
+        p{
+            
+            padding:0 2em;
+            text-align: center;
+            a{
+                color:#fff;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+
+//tour page end
 
 /*------------------------------------*\
     IMAGES

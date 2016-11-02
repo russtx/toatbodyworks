@@ -35,8 +35,8 @@
 					<div class="logo">
 						<a href="<?php echo home_url(); ?>">
 							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/header.png" alt="Logo" class="logo-img " id="mobileOnly">
-                                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/header-2.png" alt="Logo" class="logo-img" id="desktopOnly">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/header.png" alt="Logo" class="logo-img " id="mobileOnly2">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/header-2.png" alt="Logo" class="logo-img" id="desktopOnly2">
 						</a>
 					</div>
 					<!-- /logo -->
