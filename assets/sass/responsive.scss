@@ -125,7 +125,7 @@ and open the template in the editor.
                     width:10em;
                     background:$olive;
                     z-index:9999;
-
+                    overflow: hidden;
                     li{
                         display:block;
                         float:none;
@@ -154,6 +154,10 @@ and open the template in the editor.
             display: block;
             margin-top: -1em;
             padding-top: 1em;
+        }
+        .nav ul.menu li ul li:a:hover{
+            background: $olive-hover;
+            
         }
         .nav ul.menu li:hover > ul {
             display:block;
@@ -250,9 +254,11 @@ and open the template in the editor.
         .testimonial{
           @include span-columns(6);  
           padding:0 3em;
+          font-style: italic;
           color:$yellow;
           span.leftQuote{
               float:left;
+              
           }
           
           h3{

@@ -11,7 +11,7 @@
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 		<!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(defaultContent); ?>>
+		<article id="post-<?php the_ID(); ?>" <?php post_class('defaultContent'); ?>>
 
 			<!-- post thumbnail -->
 			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
