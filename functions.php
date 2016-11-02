@@ -530,6 +530,41 @@ function create_post_type_html5()
         ) // Add Category and Post Tags support
     ));
     
+    register_taxonomy_for_object_type('category', 'testimonials'); // Register Taxonomies for Category
+    register_taxonomy_for_object_type('post_tag', 'testimonials');
+    register_post_type('testimonials', // Register Custom Post Type
+        array(
+        'labels' => array(
+            'name' => __('Testimonials', 'testimonials'), // Rename these to suit
+            'singular_name' => __('Car Make Logo', 'testimonials'),
+            'add_new' => __('Add New', 'testimonials'),
+            'add_new_item' => __('Add New Testimonials', 'testimonials'),
+            'edit' => __('Edit', 'testimonials'),
+            'edit_item' => __('Edit Testimonials', 'testimonials'),
+            'new_item' => __('New Testimonials', 'testimonials'),
+            'view' => __('View Testimonials', 'testimonials'),
+            'view_item' => __('View Testimonials', 'testimonials'),
+            'search_items' => __('Search Testimonials', 'testimonials'),
+            'not_found' => __('No Testimonialss found', 'testimonials'),
+            'not_found_in_trash' => __('No Testimonialss found in Trash', 'testimonials')
+        ),
+        'menu_icon' => 'dashicons-format-quote',   
+        'public' => true,
+        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+        'has_archive' => true,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            
+        ), // Go to Dashboard Custom HTML5 Blank post for supports
+        'can_export' => true, // Allows export in Tools > Export
+        'taxonomies' => array(
+            'post_tag',
+            'category'
+        ) // Add Category and Post Tags support
+    ));
+    
 }
 
 /*------------------------------------*\

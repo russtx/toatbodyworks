@@ -2,12 +2,12 @@
 
 	<main role="main">
 		<!-- section -->
-                <section class="default">
+                <section class="tourSection">
                     
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home-image-414" alt="Logo" id="mobileOnly" class="homeImage" >
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home-image-desktop" alt="Logo" id="desktopOnly" class="homeImage" >
 
-
+                    <div class="postArea">
 			<h1><?php the_title(); ?></h1>
 
                         <?php
@@ -28,7 +28,7 @@
                                     
                                     <p><?php the_excerpt(); ?></p>
 
-                                </div>
+                                </div></s>
                         <?php endwhile; ?> 
                                 
                                 
@@ -50,7 +50,7 @@
                                     
                                     <p><?php the_excerpt(); ?></p>
 
-                                </div>
+                                </div></a>
                         <?php endwhile; ?> 
                                 
                         <?php
@@ -62,7 +62,7 @@
 
                             while ( $loop->have_posts() ) : $loop->the_post();?>
 
-                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                                 <div class="tourPost">
                                                           
                                     <h2><?php the_title(); ?></h2>
@@ -71,7 +71,7 @@
                                     
                                     <p><?php the_excerpt(); ?></p>
 
-                                </div>
+                                </div></a>
                         <?php endwhile; ?> 
                                 
                         <?php
@@ -83,7 +83,7 @@
 
                             while ( $loop->have_posts() ) : $loop->the_post();?>
 
-                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                                 <div class="tourPost">
                                                           
                                     <h2><?php the_title(); ?></h2>
@@ -92,9 +92,33 @@
                                     
                                     <p><?php the_excerpt(); ?></p>
 
-                                </div>
+                                </div></a>
                         <?php endwhile; ?>        
+                    </div><!-- postArea -->
+                    
+                    <div class="testimonialArea" id="desktopOnly2">
+                        
+                        
+                        <?php
+                            $args = array( 'post_type' => 'testimonials','cat' => 13,'orderby' => 'menu_order date', 'order' =>
 
+                            'ASC',  'posts_per_page' => '2' );
+
+                            $loop = new WP_Query( $args );
+
+                            while ( $loop->have_posts() ) : $loop->the_post();?>
+
+                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                                <div class="testimonial">
+                                                                                                        
+                                    <span class="leftQuote">&ldquo; &nbsp;</span><?php the_excerpt(); ?><span class="rightQuote">&nbsp; &rdquo;</span>
+                                    <h3>&#45; Testimonial&#44; <?php the_title(); ?></h3>
+                                </div></a>
+                        <?php endwhile; ?> 
+                        
+                        
+                    </div>
+                    
 		</section>
 		<!-- /section -->
 	</main>

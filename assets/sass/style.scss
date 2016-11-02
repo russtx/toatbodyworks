@@ -226,6 +226,9 @@ nav input[type="checkbox"]{
             font-weight: 600;
             line-height: 1em;
         }
+        p{
+            color:#fff;
+        }
         span.post-meta-key{
             display:none;
         }
@@ -270,7 +273,11 @@ nav input[type="checkbox"]{
 //home page end
 
 //tour page start
-.default{
+.tourSection{
+    
+    img.homeImage{
+        width:100%
+    }
     h1{
         text-align:center;
     }
@@ -282,6 +289,8 @@ nav input[type="checkbox"]{
         }
         .postThumb{
             img{
+                display:block;
+                margin:0 auto;
                 padding:1em 3em;
             }
         }
@@ -299,6 +308,33 @@ nav input[type="checkbox"]{
 
 
 //tour page end
+//defaultSection start
+.defaultSection{
+    display:block;
+    overflow: hidden;
+    
+    img.homeImage{
+        width:100%
+    }
+    h1{
+        text-align: center;
+        color:#fff;
+        margin-top:1em;
+    }
+    .defaultContent{
+        @include outer-container;
+        padding: 1em 2em;
+        p{
+            color:#fff;
+        }
+        .attachment-post-thumbnail{
+            display:block;
+            margin:0 auto;
+        }
+    }
+}
+
+//defaultsection end
 
 /*------------------------------------*\
     IMAGES

@@ -7,7 +7,21 @@ and open the template in the editor.
     Created on : Aug 5, 2016, Aug 5, 2016 2:06:57 PM
     Author     : Russ
 */
+/*------------------------------------*\
+    Imports
+\*------------------------------------*/
 
+@import "assets/sass/bourbon/bourbon.scss";
+
+@import "assets/sass/neat/neat.scss";
+
+@import 'mobile-menu.scss';
+
+@import 'variables.scss';
+
+@import "base/base";
+
+@import "assets/sass/font-awesome-4.6.3/scss/font-awesome.scss";
 
 /*-------------------------------------------------------------------------------------------*\
     RESPONSIVE      min-width:375px iPhone6 Portrait
@@ -38,6 +52,19 @@ and open the template in the editor.
     #desktopOnly{
         display:block;
     }
+    .postArea{
+        padding:0 2em;
+        min-height:72em;
+        height:100%;
+        .tourPost{
+            @include span-columns(6);
+        }
+        .tourPost:nth-child(odd){
+            @include span-columns(6);
+            @include omega();
+        }
+    }
+    
     .footer{
         height:23em;
         
@@ -122,7 +149,11 @@ and open the template in the editor.
         }
         
         .nav ul.menu li.current-menu-item>a, .nav ul.menu li a:hover {
-            color: #fff;
+            background: $olive-hover;
+            height: 4em;
+            display: block;
+            margin-top: -1em;
+            padding-top: 1em;
         }
         .nav ul.menu li:hover > ul {
             display:block;
@@ -132,76 +163,117 @@ and open the template in the editor.
         border-bottom:solid 2px $olive;
     }
     .homeSection{
-        .homeContent{
-            background:transparent;
-            border:none;
-            font-size:1.5em;
-            
-            ul.post-meta{
-                font-size:.75em;
-                li{
-                    border-top:solid 2px $yellow;
-                    padding-top:2em;
-                    span{
-                        
+        font-size: 1.1em;
+        
+            .homeContent{
+                background:transparent;
+                border:none;
+                font-size:1.5em;
+
+                ul.post-meta{
+                    font-size:.75em;
+                    li{
+                        border-top:solid 2px $yellow;
+                        padding-top:2em;
+                        span{
+
+                        }
                     }
                 }
             }
-        }
-        h1{
-            display:none;
-        }
-        .leftSide{
-            width:83.3333%;
-            float: left;
-            display:block;
-        }
-        .sidebar{
-            width:16.6667%;
-            float: left;
-            display: block;
-            background:#fff;
-            height: 100%;
-            min-height: 81em;
-            overflow: hidden;
-            ul{
-                li{
-                    img{
-                        display:block;
-                        margin: 1.5em auto;
-                        padding: 0 .5em;
+            h1{
+                display:none;
+            }
+            .leftSide{
+                width:83.3333%;
+                float: left;
+                display:block;
+            }
+            .sidebar{
+                width:16.6667%;
+                float: left;
+                display: block;
+                background:#fff;
+                height: 100%;
+                min-height: 81em;
+                overflow: hidden;
+                ul{
+                    li{
+                        img{
+                            display:block;
+                            margin: 1.5em auto;
+                            padding: 0 .5em;
+                        }
                     }
                 }
             }
-        }
-        .homePostSection{
-            @include span-columns(6);
-            min-height: 26em;
-            .homePost{
+            .homePostSection{
+                @include span-columns(6);
+                min-height: 26em;
+                .homePost{
+                    p{
+                        padding: 0 2em;
+                    }
+                }
+            }
+            .homePostSection:nth-child(odd){
+                @include span-columns(6);
+                @include omega();
+            }
+            .centerText{
+                @include span-columns(12);
+                background:$gray;
+                border-top: 2px solid #fff;
+                border-bottom: 2px solid #fff;
+                height:8em;
                 p{
-                    padding: 0 2em;
+                    color:$yellow;
+                    padding: 1em 1.5em;
+                    font-size: 1.4em;
+                    font-weight: 500;
+                    line-height: 1.8em;
+                    span{
+                        color:#fff;
+                    }
                 }
             }
+    }
+    .tourSection{
+        font-size: 1.1em;
+        .postArea{
+            @include outer-container;
         }
-        .homePostSection:nth-child(2), .homePostSection:nth-child(8){
-            @include span-columns(6);
-            @include omega();
+    }
+    .testimonialArea{
+        @include outer-container;
+        padding: 0 2em;
+        .testimonial{
+          @include span-columns(6);  
+          padding:0 3em;
+          color:$yellow;
+          span.leftQuote{
+              float:left;
+          }
+          
+          h3{
+              color:#fff;
+              text-align: center;
+              margin-top:1em;
+              margin-bottom: 4em;
+          }
         }
-        .centerText{
-            @include span-columns(12);
-            background:$gray;
-            border-top: 2px solid #fff;
-            border-bottom: 2px solid #fff;
-            height:8em;
+        .testimonial:nth-child(odd){
+          @include span-columns(6);
+          @include omega();
+        }
+    }
+    .defaultSection{
+        .defaultContent{
+            min-height:46em;
+            padding: 2em 5em;
+            font-size: 1.1em;
             p{
-                color:$yellow;
-                padding: 1em 1.5em;
-                font-size: 1.4em;
-                font-weight: 500;
-                line-height: 1.8em;
-                span{
-                    color:#fff;
-                }
+                margin-bottom:1.5em;
             }
         }
     }
@@ -248,6 +320,7 @@ and open the template in the editor.
             
         }
     }
+    
 }
 
 /*-------------------------------------------------------------------------------------------*\
@@ -273,6 +346,9 @@ and open the template in the editor.
         .sidebar{
             min-height: 83em;
         }
+    }
+    .postArea{
+        min-height:80em;
     }
 }
 

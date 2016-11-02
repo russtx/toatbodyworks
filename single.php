@@ -2,7 +2,7 @@
 
 	<main role="main">
 	<!-- section -->
-	<section>
+        <section class="defaultSection">
 
              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home-image-414" alt="Logo" id="mobileOnly" class="homeImage" >
              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home-image-desktop" alt="Logo" id="desktopOnly" class="homeImage" >
@@ -11,7 +11,7 @@
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 		<!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<article id="post-<?php the_ID(); ?>" <?php post_class(defaultContent); ?>>
 
 			<!-- post thumbnail -->
 			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
@@ -27,23 +27,19 @@
 			</h1>
 			<!-- /post title -->
 
-			<!-- post details -->
-			<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-			<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-			<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-			<!-- /post details -->
+			
 
 			<?php the_content(); // Dynamic Content ?>
 
 			<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
 
-			<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
+			
 
 			<p><?php _e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
 
 			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
 
-			<?php comments_template(); ?>
+			
 
 		</article>
 		<!-- /article -->

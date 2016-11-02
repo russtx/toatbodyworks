@@ -2,7 +2,7 @@
 
 	<main role="main">
 		<!-- section -->
-		<section>
+                <section class="defaultSection">
                     
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home-image-414" alt="Logo" id="mobileOnly" class="homeImage" >
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home-image-desktop" alt="Logo" id="desktopOnly" class="homeImage" >
@@ -13,7 +13,7 @@
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(defaultContent); ?>>
 
 				<?php the_content(); ?>
 
