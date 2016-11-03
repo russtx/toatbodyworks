@@ -56,7 +56,7 @@ get_header(); ?>
 
                                     while ( $loop->have_posts() ) : $loop->the_post();?>
 
-                                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                                    <a href="<?php the_permalink(); ?>" >
                                         <div class="homePost">
 
                                             <?php the_post_thumbnail(array()); // Declare pixel size you need inside the array?>
@@ -77,7 +77,7 @@ get_header(); ?>
 
                                     while ( $loop->have_posts() ) : $loop->the_post();?>
 
-                                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                                    <a href="<?php the_permalink(); ?>" >
                                         <div class="homePost">
 
                                             <?php the_post_thumbnail(array()); // Declare pixel size you need inside the array?>
@@ -103,7 +103,7 @@ get_header(); ?>
 
                                     while ( $loop->have_posts() ) : $loop->the_post();?>
 
-                                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                                    <a href="<?php the_permalink(); ?>" >
                                         <div class="homePost">
 
                                             <?php the_post_thumbnail(array()); // Declare pixel size you need inside the array?>
@@ -124,7 +124,7 @@ get_header(); ?>
 
                                     while ( $loop->have_posts() ) : $loop->the_post();?>
 
-                                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                                    <a href="<?php the_permalink(); ?>" >
                                         <div class="homePost">
 
                                             <?php the_post_thumbnail(array()); // Declare pixel size you need inside the array?>

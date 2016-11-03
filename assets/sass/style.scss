@@ -248,6 +248,10 @@ nav input[type="checkbox"]{
             img{
                 display: block;
                 margin:3em auto 2em auto;
+                transition: scale 1s ease-out;
+            }
+            img:hover{
+                transform: scale(1.2);
             }
             p{
                 color:#fff;
@@ -256,6 +260,11 @@ nav input[type="checkbox"]{
                 text-align: center;
                 padding:0 3em;
                 
+                transition: color 1s ease-out;
+                
+            }
+            p:hover{
+                color:$yellow;
             }
         }
     }
@@ -293,6 +302,9 @@ nav input[type="checkbox"]{
                 margin:0 auto;
                 padding:1em 3em;
             }
+            img:hover{
+                opacity: .8;
+            }
         }
         p{
             
@@ -301,6 +313,10 @@ nav input[type="checkbox"]{
             a{
                 color:#fff;
                 font-weight: 500;
+                transition: color 1s ease-out;
+            }
+            a:hover{
+                color:$yellow;
             }
         }
     }

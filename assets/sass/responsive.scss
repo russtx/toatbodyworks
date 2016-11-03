@@ -297,11 +297,21 @@ and open the template in the editor.
                 a{
                     color:#fff;
                     line-height:1.8em;
+                    
                     .fa{
+                        
                         color:$yellow;
                         font-size: 3em;
                         padding: 1em .2em .2em;
                     }
+                }
+               
+                span{
+                    color:#fff;
+                    transition: color 1s ease-out;
+                }
+                 span:hover{
+                   color:$yellow; 
                 }
             }
         }

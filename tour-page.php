@@ -19,7 +19,7 @@
 
                             while ( $loop->have_posts() ) : $loop->the_post();?>
 
-                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                            <a href="<?php the_permalink(); ?>" >
                                 <div class="tourPost">
                                     
                                 <h2><?php the_title(); ?></h2>
@@ -41,7 +41,7 @@
 
                             while ( $loop->have_posts() ) : $loop->the_post();?>
 
-                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                            <a href="<?php the_permalink(); ?>" >
                                 <div class="tourPost">
                                      
                                     <h2><?php the_title(); ?></h2>
@@ -62,7 +62,7 @@
 
                             while ( $loop->have_posts() ) : $loop->the_post();?>
 
-                                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                                <a href="<?php the_permalink(); ?>" >
                                 <div class="tourPost">
                                                           
                                     <h2><?php the_title(); ?></h2>
@@ -83,7 +83,7 @@
 
                             while ( $loop->have_posts() ) : $loop->the_post();?>
 
-                                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                                <a href="<?php the_permalink(); ?>" >
                                 <div class="tourPost">
                                                           
                                     <h2><?php the_title(); ?></h2>
@@ -108,7 +108,7 @@
 
                             while ( $loop->have_posts() ) : $loop->the_post();?>
 
-                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                            <a href="<?php the_permalink(); ?>" >
                                 <div class="testimonial">
                                                                                                         
                                     <span class="leftQuote">&ldquo; &nbsp;</span><?php the_excerpt(); ?><span class="rightQuote">&nbsp; &rdquo;</span>
