@@ -4,8 +4,12 @@
 			<footer class="footer" role="contentinfo">
                             
                             <div class="footerSocials" id="mobileOnly2">
-                                <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                                <a href="https://api.instagram.com/oembed?url=http://instagr.am/p/fA9uwTtkSN/sharer.php?u=<?php the_permalink();?>&t=<?php the_title(); ?>" target="blank">
+                                     <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+                                <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&t=<?php the_title(); ?>" target="blank">
+                                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                </a>
                             </div>
                             
                             <div class="phone" id="mobileOnly2">
@@ -34,8 +38,12 @@
                                         <span>Email Us</span></a>
                                 </div>
                                 <div class="footerLinks">
-                                    <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a><br />
+                                    <a href="https://api.instagram.com/oembed?url=http://instagr.am/p/fA9uwTtkSN/sharer.php?u=<?php the_permalink();?>&t=<?php the_title(); ?>" target="blank">
+                                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    </a>
+                                <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&t=<?php the_title(); ?>" target="blank">
+                                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                </a><br />
                                 <span>@toatbodyworks</span>
                                 </div>
                                 
