@@ -75,7 +75,13 @@ and open the template in the editor.
     RESPONSIVE      min-width:660px iPhone6 Landscape
 \*--------------------------------------------------------------------------------------------*/
 @media only screen and (min-width:660px){
-    
+    .defaultContent{
+        @include span-columns(6);
+    }
+    .defaultContent:nth-child(even){
+        @include span-columns(6);
+        @include omega();
+    }
 }
 
 /*-------------------------------------------------------------------------------------------*\
@@ -113,8 +119,8 @@ and open the template in the editor.
         }
         .nav{
             ul.menu{
-                @include span-columns(8);
-                @include shift(4);
+                @include span-columns(9);
+                @include shift(3);
                 position: absolute;
                 top:0;
                 display: inline-block;
@@ -346,8 +352,8 @@ and open the template in the editor.
     .header{
         .nav{
             ul.menu{
-                @include span-columns(6);
-                @include shift(6);
+                @include span-columns(8);
+                @include shift(4);
             }
         }
     }
@@ -385,6 +391,9 @@ and open the template in the editor.
             }
         }
     }
+    .postContainer{
+        @include outer-container;
+    }
 }
 
 /*-------------------------------------------------------------------------------------------*\
@@ -394,11 +403,12 @@ and open the template in the editor.
     .header{
         .nav{
             ul.menu{
-                @include span-columns(5);
-                @include shift(7);
+                //@include span-columns(5);
+                //@include shift(7);
             }
         }
     }
+    
 }
 @media only screen and (-webkit-min-device-pixel-ratio:1.5),
 	   only screen and (min-resolution:144dpi) {

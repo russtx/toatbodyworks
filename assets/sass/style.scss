@@ -341,12 +341,18 @@ nav input[type="checkbox"]{
     .defaultContent{
         @include outer-container;
         padding: 1em 2em;
+        min-height:33em;
         p{
             color:#fff;
         }
         .attachment-post-thumbnail{
             display:block;
             margin:0 auto;
+        }
+        .SocialLinks{
+            a{
+                font-size:3em;
+            }
         }
     }
 }
@@ -361,7 +367,7 @@ nav input[type="checkbox"]{
         color:#fff;
     }
 }
-    
+  
 
 //contact end
 
