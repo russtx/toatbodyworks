@@ -370,7 +370,23 @@ nav input[type="checkbox"]{
   
 
 //contact end
-
+.testimonialContent{
+    padding: 0 3em;
+    h2{
+        margin-top:2em;
+    }
+}
+.left-quotes{
+    float: left;
+    margin-right: 1em;
+    font-size: 2em;
+}
+.right-quotes{
+    float: right;
+    margin-right: 1em;
+    font-size: 2em;
+    margin-top: -1em;
+}
 /*------------------------------------*\
     IMAGES
 \*------------------------------------*/

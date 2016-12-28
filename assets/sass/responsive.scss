@@ -41,7 +41,6 @@ and open the template in the editor.
 @media only screen and (min-width:400px){
     
 }
-
 /*-------------------------------------------------------------------------------------------*\
     RESPONSIVE      min-width:568px   iPhone5 Landscape
 \*--------------------------------------------------------------------------------------------*/
@@ -67,7 +66,7 @@ and open the template in the editor.
     
     .footer{
         height:23em;
-        
+       
     }
 }
 
@@ -77,10 +76,28 @@ and open the template in the editor.
 @media only screen and (min-width:660px){
     .defaultContent{
         @include span-columns(6);
+        
     }
     .defaultContent:nth-child(even){
         @include span-columns(6);
         @include omega();
+    }
+    .page-template-default{
+        .defaultContent{
+            @include span-columns(12);
+        }
+    }
+    .defaultContent:nth-child(even){
+        @include span-columns(12);
+        @include omega();
+    }
+    .post-template-default{
+        .defaultContent{
+            @include span-columns(12);
+        }
+    }
+    .testimonialContent {
+        padding: 0 6em;
     }
 }
 
@@ -284,6 +301,7 @@ and open the template in the editor.
             min-height:46em;
             padding: 2em 5em;
             font-size: 1.1em;
+            
             p{
                 margin-bottom:1.5em;
             }
@@ -342,7 +360,15 @@ and open the template in the editor.
             
         }
     }
-    
+    .defaultSection{
+        min-height: 66em;
+    }
+    .testimonialSection{
+       @include outer-container; 
+    }
+    .testimonialContent:nth-child(1){
+        margin-top:33em;
+    }
 }
 
 /*-------------------------------------------------------------------------------------------*\
@@ -394,6 +420,19 @@ and open the template in the editor.
     .postContainer{
         @include outer-container;
     }
+    .testimonialContent{
+        h2{
+            font-size: 3em;
+        }
+        p{
+            font-size: 2em;
+            line-height: 3em;
+        }
+        
+    }
+    .left-quotes, .right-quotes{
+        font-size: 6em;
+    }
 }
 
 /*-------------------------------------------------------------------------------------------*\
@@ -410,6 +449,11 @@ and open the template in the editor.
     }
     
 }
+/*-------------------------------------------------------------------------------------------*\
+    RESPONSIVE     
+\*--------------------------------------------------------------------------------------------*/
+
+
 @media only screen and (-webkit-min-device-pixel-ratio:1.5),
 	   only screen and (min-resolution:144dpi) {
 
